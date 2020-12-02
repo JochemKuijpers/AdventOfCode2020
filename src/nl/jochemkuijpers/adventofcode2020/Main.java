@@ -3,6 +3,8 @@ package nl.jochemkuijpers.adventofcode2020;
 import nl.jochemkuijpers.adventofcode2020.common.Exercise;
 import nl.jochemkuijpers.adventofcode2020.day1.Day1Part1;
 import nl.jochemkuijpers.adventofcode2020.day1.Day1Part2;
+import nl.jochemkuijpers.adventofcode2020.day2.Day2Part1;
+import nl.jochemkuijpers.adventofcode2020.day2.Day2Part2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +13,9 @@ import java.util.Scanner;
 public class Main {
     private static final List<Exercise> EXERCISE_LIST = List.of(
             new Day1Part1(),
-            new Day1Part2()
+            new Day1Part2(),
+            new Day2Part1(),
+            new Day2Part2()
     );
 
     public static void main(String[] args) {
