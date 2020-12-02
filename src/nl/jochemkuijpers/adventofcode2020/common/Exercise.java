@@ -16,6 +16,9 @@ public abstract class Exercise implements Consumer<List<String>> {
     }
 
     @Override
+    public abstract void accept(List<String> input);
+
+    @Override
     public String toString() {
         return name;
     }
