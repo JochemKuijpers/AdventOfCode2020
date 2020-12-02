@@ -27,10 +27,10 @@ public class Day2Part2 extends Exercise {
                 throw new IllegalArgumentException("Illegal input.");
             }
 
-            int low = Integer.parseInt(matcher.group(1));
-            int high = Integer.parseInt(matcher.group(2));
-            char chr = matcher.group(3).charAt(0);
-            String password = matcher.group(4);
+            final int low = Integer.parseInt(matcher.group(1));
+            final int high = Integer.parseInt(matcher.group(2));
+            final char chr = matcher.group(3).charAt(0);
+            final String password = matcher.group(4);
 
             // either the first character matches, or the last.. exclusive or.
             if ( (password.charAt(low - 1) == chr) ^ (password.charAt(high - 1) == chr) ) {
