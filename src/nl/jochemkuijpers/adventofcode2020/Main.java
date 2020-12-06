@@ -8,6 +8,9 @@ import nl.jochemkuijpers.adventofcode2020.day2.Day2Part2;
 import nl.jochemkuijpers.adventofcode2020.day3.Day3Part1;
 import nl.jochemkuijpers.adventofcode2020.day3.Day3Part2;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -43,7 +46,6 @@ public class Main {
 
     private static boolean pickAndExecuteExercise(Scanner scanner) {
         final Exercise exercise = CommandLineUtils.selectFromItems(EXERCISE_LIST);
-        final List<String> input = new ArrayList<>();
 
         if (exercise == null) {
             return false;
@@ -53,17 +55,17 @@ public class Main {
         System.out.printf("Selected: %s\n", exercise.getName());
 
         System.out.println();
-        System.out.println("--- paste input followed by an empty line ---");
+        System.out.println("--- put your input in the input.txt file and press enter ---");
         System.out.println();
 
-        while (true) {
-            final String line = scanner.nextLine();
+        scanner.nextLine();
 
-            if (!line.isEmpty()) {
-                input.add(line);
-            } else {
-                break;
-            }
+        final List<String> input;
+        try {
+            input = new ArrayList<>(Files.readAllLines(Paths.get("input.txt")));
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
         }
 
         System.out.printf("--- got %s lines of input ---\n", input.size());
