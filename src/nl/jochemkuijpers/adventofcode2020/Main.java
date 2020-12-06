@@ -8,6 +8,8 @@ import nl.jochemkuijpers.adventofcode2020.day2.Day2Part2;
 import nl.jochemkuijpers.adventofcode2020.day3.Day3Part1;
 import nl.jochemkuijpers.adventofcode2020.day3.Day3Part2;
 import nl.jochemkuijpers.adventofcode2020.day4.Day4;
+import nl.jochemkuijpers.adventofcode2020.day5.Day5Part1;
+import nl.jochemkuijpers.adventofcode2020.day5.Day5Part2;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -25,7 +27,9 @@ public class Main {
             new Day3Part1(),
             new Day3Part2(),
             new Day4(true),
-            new Day4(false)
+            new Day4(false),
+            new Day5Part1(),
+            new Day5Part2()
     );
 
     public static void main(String[] args) {
